@@ -81,7 +81,7 @@ def set_save(m1name, m1led1, m1led2, m2name, m2led1, m2led2, maled1, maled2):
             ma_led2 = maled2.get()
             auto_label.config(text = "Auto Led1 %d%%, Led2 %d%%" % (ma_led1, ma_led2)) #현재 설정 창의 내용 바꿔줌
         except TypeError:
-            messagebox.showerror("오류!", "창 이름 또는 led의 값을 반드시 변경해야 합니다.")
+            messagebox.showerror("오류!", "현재 설정 창이 열려있어야 합니다!")
 
 #메뉴 - mode 창
 def new_window():
@@ -170,7 +170,7 @@ def new_window():
         btn_save = Button(mode_bot, text="저장", command=lambda:set_save(m1name, m1led1, m1led2, m2name, m2led1, m2led2, maled1, maled2))
         btn_save.pack()
     except TypeError:
-        messagebox.showerror("오류!", "창 이름 또는 led의 값을 반드시 변경해야 합니다.")
+        messagebox.showerror("오류!", "현재 설정 창이 열려있어야 합니다!")
 
 
 # 외부함수에서 사용하기 위해 라벨을 전역변수로 선언
